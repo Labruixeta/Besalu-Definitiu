@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Escenes/Joc.unity
+  isLoaded: 1
+  isActive: 1
