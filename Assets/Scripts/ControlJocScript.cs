@@ -16,7 +16,6 @@ public class ControlJocScript : MonoBehaviour
 	public int ns;
 	public int ne;
 	private AudioSource musicaJoc;
-	public bool butEstat = false;
 
 	void Start()
 	{
@@ -36,9 +35,6 @@ public class ControlJocScript : MonoBehaviour
 	}
 	void Update () 
 	{
-		if (butEstat) {
-			Escriu ("butEstat=true");
-		}
 		if (!string.IsNullOrEmpty (nomEntrada) ) 
 		{
 			switch (nomEntrada) 
@@ -124,13 +120,13 @@ public class ControlJocScript : MonoBehaviour
 				{
 					segurObj = true;
 					SetEstat ();
-					Escriu("Objecte : RELLOTGE.");
+					Escriu("Has trobat un rellotge antic. Li falten les manetes.");
 				} 
 				else 
 				{
 					GameObject.Find ("ObjecteMostrat").SendMessage ("EntraObjecte",1);
 					segurObj = false;
-					Escriu("Rellotge Agafat.");
+					Escriu("Agafes el rellotge antic.");
 					SetEstat ();
 					GameObject.Find ("NS9").SetActive (false);
 				}
@@ -158,6 +154,11 @@ public class ControlJocScript : MonoBehaviour
 					ApagaSensors ();
 					fade.Play ("FadeOff");
 				}
+				break;
+			case "O1":
+				segurObj = false;
+				SetEstat ();
+				Escriu("Aquest avi t'explica que ha perdut un rellotge molt vell. Et demana si pots ajudar-lo a bucar pel pont...");
 				break;
 
 
@@ -245,13 +246,5 @@ public class ControlJocScript : MonoBehaviour
 		segur = false;
 		nomEntrada = "";
 	}
-	public void ButOn()
-	{
-		print ("Si");
-		butEstat = true;
-	}
-	public void ButOff()
-	{
-		butEstat = false;
-	}
+
 }

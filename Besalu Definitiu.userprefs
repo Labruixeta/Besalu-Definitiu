@@ -3,11 +3,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ControlJocScript.cs">
     <Files>
       <File FileName="Assets\Scripts\ControlIniciScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ControlJocScript.cs" Line="250" Column="13" />
+      <File FileName="Assets\Scripts\ControlJocScript.cs" Line="129" Column="39" />
       <File FileName="Assets\Scripts\ControlObjecteMostrat.cs" Line="216" Column="3" />
-      <File FileName="Assets\Scripts\NSControl.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\NSControl.cs" Line="28" Column="3" />
       <File FileName="Assets\Scripts\MapaOnControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ConsolaTextControl.cs" Line="73" Column="3" />
+      <File FileName="Assets\Scripts\ConsolaTextControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

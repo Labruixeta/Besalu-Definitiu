@@ -8,18 +8,22 @@ public class NSControl : MonoBehaviour {
 	void Update () 
 	{
 		bool usserAction2 = Input.GetMouseButtonDown (0);
-		if (usserAction2 && controlEntrada2) {
+		if (usserAction2 && controlEntrada2) 
+		{
 			controlEntrada2 = false;
 			usserAction2 = false;
-			if (gameObject.name.Contains ("N") || gameObject.name.Contains ("O")) {
+			if (gameObject.name.Contains ("N") || gameObject.name.Contains ("O")) 
+			{
 				GameObject.Find ("ObjecteControlJoc").SendMessage ("EntraObjecte", gameObject.name);
 				GameObject.Find ("ObjecteMostrat").SendMessage ("ClicExtern");
-			} else if (gameObject.name.Contains ("M")) { 
+			} 
+			else if (gameObject.name.Contains ("M")) 
+			{ 
 				GameObject.Find ("ObjecteMostrat").SendMessage ("MouseOnObjecte", gameObject.name);
 			}
-	//		GameObject.Find ("ObjecteMostrat").SendMessage ("ClicExtern", gameObject.name);
-		
-		} else {
+		} 
+		else 
+		{
 			controlEntrada2 = false;
 		}
 	}
