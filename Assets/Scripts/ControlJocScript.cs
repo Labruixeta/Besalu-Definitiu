@@ -158,7 +158,8 @@ public class ControlJocScript : MonoBehaviour
 			case "O1":
 				segurObj = false;
 				SetEstat ();
-				Escriu("Aquest avi t'explica que ha perdut un rellotge molt vell. Et demana si pots ajudar-lo a bucar pel pont...");
+				Escriu("Aquest avi t'explica que ha perdut un rellotge molt vell. Et demana si pots ajudar-lo a bucar pel pont...Ell ha trobat una de les manets del relotge.");
+				GameObject.Find ("ObjecteMostrat").SendMessage ("EntraObjecte",2);
 				break;
 
 

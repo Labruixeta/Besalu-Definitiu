@@ -48,6 +48,9 @@ public class ControlObjecteMostrat : MonoBehaviour
 			case 1:
 				Nou ();
 				break;
+			case 2:
+				Nou ();
+				break;
 			default:
 				break;
 			}
@@ -69,6 +72,10 @@ public class ControlObjecteMostrat : MonoBehaviour
 			objecteImatge.sprite = Resources.Load<Sprite> ("Objectes/rellotge_grn");
 			animaciObjecte.Play("ObjecteRellotgeOn");
 			break;
+		case 2:
+			objecteImatge.sprite = Resources.Load<Sprite> ("Objectes/2");
+			animaciObjecte.Play("ObjecteRellotgeOn");
+			break;
 		default:
 			break;
 		}
@@ -82,9 +89,11 @@ public class ControlObjecteMostrat : MonoBehaviour
 		case 1:
 			animaciObjecte.Play ("ObjecteRellotgeOff");
 			AfegeigObjecte (1);
+			MostraObjectes ();
+			break;
+		case 2:
+			animaciObjecte.Play ("ObjecteRellotgeOff");
 			AfegeigObjecte (2);
-			AfegeigObjecte (3);
-
 			MostraObjectes ();
 			break;
 		default:
